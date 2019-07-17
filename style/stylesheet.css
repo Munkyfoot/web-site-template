@@ -1,0 +1,78 @@
+html{        
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+body{
+    min-height: 100%;
+    width: 100%;
+    max-width: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    background-color: rgb(232,232,232);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+body > div:not(.navbar){    
+    background-color: rgb(200,200,200);
+    margin: 5px 5px 0 5px;
+    padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0 0 5px 0;
+    padding: 5px 10px;
+    border-bottom: 1px solid black;
+}
+
+div > h1, h2, h3, h4, h5, h6{
+    margin: 0 0 5px 0;
+    padding: 0;
+    border-bottom: 1px solid black;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(48,48,48);
+    text-decoration: underline rgb(160,160,160);
+}
+
+a:hover{
+    color: inherit;
+    text-decoration: underline;
+}
+
+p{
+    margin: auto;
+    padding: 5px auto;
+}
+
+body > *{
+    display: none;
+}
+
+.navbar{
+    background-color: black;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    display: flex;
+}
+
+.navbar > a{
+    text-decoration: none;
+    display: block;
+    padding-right: 10px;
+    font-size: larger;
+    color: rgb(200,200,200);
+}
+
+.navbar > a:hover{
+    color: rgb(232,232,232);
+    text-decoration: underline;
+}
