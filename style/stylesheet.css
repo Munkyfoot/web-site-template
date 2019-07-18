@@ -18,15 +18,16 @@ body{
     font-size: medium;
 }
 
-body > div:not(.navbar){    
+body > div:not(.navbar), .flexbox > div{    
     box-shadow: 0 1px 2px 1px rgba(0,0,0,0.5);
     background-color: rgb(200,200,200);
     margin: 10px 10px 0 10px;
     padding: 10px;    
     transition: box-shadow 0.15s ease-in-out;
+    border-radius: 2px;
 }
 
-body > div:not(.navbar):hover{
+body > div:not(.navbar):hover, .flexbox > div:hover{
     box-shadow: 0 1px 2px 1px rgba(0,0,0,1);
 }
 
@@ -36,7 +37,7 @@ h1, h2, h3, h4, h5, h6{
     border-bottom: 1px solid black;
 }
 
-div > h1, h2, h3, h4, h5, h6{
+div > h1, div > h2, div > h3, div > h4, div > h5, div > h6{
     margin: 0 0 5px 0;
     padding: 0;
     border-bottom: 1px solid black;
@@ -54,12 +55,13 @@ a:hover{
 }
 
 p{
-    margin: auto;
-    padding: 5px auto;
+    margin: 5px 0 0 0;
+    padding: 0 10px;
 }
 
-body > *{
-    display: none;
+div > p{
+    margin: 0;
+    padding: 0;
 }
 
 .navbar{
@@ -101,4 +103,40 @@ body > *{
 
 .navbar > a:hover:before{
     transform: scaleX(1);
+}
+
+.portrait{
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.5);
+    display: block;
+    width: calc(100% - 20px);
+    max-width: 540px;
+    margin: 10px auto 0 auto;
+    border-radius: 5%;
+}
+
+div > .portrait{
+    margin: auto;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.flexbox > div{
+    margin: 5px;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.half{
+    width: calc(100% - 20px);
+    max-width: 540px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+body > *, body div{
+    display: none;
 }

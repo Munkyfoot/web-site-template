@@ -1,7 +1,7 @@
 $(function () {
     var pages = {
         'Home': 'index.html',
-        'About': 'javascript:InProgress()',
+        'About': 'about.html',
         'Contact': 'javascript:InProgress()'
     };
     var links = "";
