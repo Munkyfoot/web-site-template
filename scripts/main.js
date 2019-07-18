@@ -1,4 +1,8 @@
 $(function () {
+    $('body').mousemove(function (event) {
+        var pageCoords = "" + event.pageX + "px 100vh";
+        $(this).css('background', "radial-gradient(circle at " + pageCoords + ", white, rgb(232,232,232))");
+    });
     SequentialFade();
 });
 
