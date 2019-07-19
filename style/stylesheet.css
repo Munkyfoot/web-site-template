@@ -1,5 +1,8 @@
-html{        
+*{
     box-sizing: border-box;
+}
+
+html{
     height: 100%;
     width: 100%;
     margin: 0;
@@ -22,14 +25,15 @@ body{
 
 body > div:not(.navbar), .flexbox > div{    
     box-shadow: 0 1px 2px 1px rgba(0,0,0,0.5);
+    width: calc(100% - 20px);
     background-color: rgb(200,200,200);
-    margin: 10px 10px 0 10px;
+    margin: 10px auto 0 auto;
     padding: 10px;    
     transition: box-shadow 0.15s ease-in-out;
     border-radius: 2px;
 }
 
-body > div:not(.navbar):hover, .flexbox > div:hover{
+body > div:not(.navbar):hover, .flexbox > div:hover, .portrait:hover{
     box-shadow: 0 1px 2px 1px rgba(0,0,0,1);
 }
 
@@ -115,9 +119,11 @@ div > p{
     box-shadow: 0 1px 2px 1px rgba(0,0,0,0.5);
     display: block;
     width: calc(100% - 20px);
-    max-width: 540px;
+    max-width: 56.25vh;
     margin: 10px auto 0 auto;
-    border-radius: 5%;
+    padding: 0;
+    border-radius: 2px;
+    transition: box-shadow 0.15s ease-in-out;
 }
 
 div > .portrait{
@@ -136,11 +142,10 @@ div > .portrait{
     flex-grow: 1;
 }
 
-.half{
-    width: calc(100% - 20px);
-    max-width: 540px;
-    margin-left: auto !important;
-    margin-right: auto !important;
+.half{    
+    max-width: 56.25vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body > *{
