@@ -6,10 +6,10 @@ $(function () {
     SequentialFade();
 });
 
-function SequentialFade(tag = "body > *, body div", spacing = 100, length = 500) {
+function SequentialFade(tag = "body > *", spacing = 100, length = 500) {
     i = 0;
     $(tag).each(function () {
-        $(this).delay(spacing * i).fadeIn(500);
+        $(this).delay(spacing * i).fadeTo(500, 1);
         i++;
     });
 }
