@@ -19,7 +19,7 @@ $(function () {
             $(this).css('marginLeft', (10 - posModX) + 'px');
             $(this).css('marginRight', (10 + posModX) + 'px');
         });
-        $('body > *:not(div, img)').each(function () {
+        $('body > *:not(div, img), .navbar').each(function () {
             var yDistance = Math.abs(event.pageY - $(this).position().top) / pageHeight;
             posModX = _posModX * (1 - yDistance);
             $(this).css('paddingLeft', (10 - posModX) + 'px');
