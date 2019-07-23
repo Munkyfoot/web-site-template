@@ -4,8 +4,8 @@ $(function () {
         $(this).css('background', "radial-gradient(circle at " + pageCoords + ", white, rgb(224,224,224))");
         var pageWidth = $(document).width();
         var pageHeight = $(document).height();
-        var _posModX = (event.pageX / pageWidth - 0.5) * 10;
-
+        //var _posModX = (event.pageX / pageWidth - 0.5) * 10;
+        /*
         $('.half, .portrait').each(function () {
             var yDistance = Math.abs(event.pageY - $(this).position().top) / pageHeight;
             posModX = _posModX * (1 - yDistance);
@@ -19,11 +19,21 @@ $(function () {
             $(this).css('marginLeft', (10 - posModX) + 'px');
             $(this).css('marginRight', (10 + posModX) + 'px');
         });
+        */
         $('body > *:not(div, img), .navbar').each(function () {
-            var yDistance = Math.abs(event.pageY - $(this).position().top) / pageHeight;
-            posModX = _posModX * (1 - yDistance);
+            var yPosition = $(this).position().top + $(this).outerHeight() * 0.5;
+            var yDistance = Math.abs(event.pageY - yPosition) / pageHeight;
+            var posModX = (event.pageX / pageWidth - 0.5) * 10 * Math.pow(1 - yDistance, 10);
             $(this).css('paddingLeft', (10 - posModX) + 'px');
             $(this).css('paddingRight', (10 + posModX) + 'px');
+        });
+        $('div:not(.navbar) > *:not(div, img)').each(function () {
+            var xPosition = $(this).position().left;
+            var xDistance = Math.abs(event.pageX - xPosition) / pageWidth;
+            var yPosition = $(this).position().top + $(this).outerHeight() * 0.5;
+            var yDistance = Math.abs(event.pageY - yPosition) / pageHeight;
+            var posModX = Math.pow(1 - xDistance, 10) * Math.pow(1 - yDistance, 10) * 10;
+            $(this).css('paddingLeft', posModX + 'px');
         });
     });
     SequentialFade();
