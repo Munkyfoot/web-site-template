@@ -8,6 +8,6 @@ $(function () {
     for (var page in pages) {
         links += "<a href='" + pages[page] + "'>" + page + "</a>";
     }
-    $('body').prepend("<div class='navbar'>" + links + "</div>");
+    $('body').prepend("<div class='navbar'>" + links + "<span id='header'>Template</span></div>");
     SequentialFade('.navbar, .navbar > *', 100);
 });
