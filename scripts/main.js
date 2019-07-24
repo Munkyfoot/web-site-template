@@ -18,7 +18,7 @@ $(function () {
             $(this).css('paddingLeft', (10 - posModX) + 'px');
             $(this).css('paddingRight', (10 + posModX) + 'px');
         });
-        $('div:not(.navbar) > *:not(div):not(img):not(form), form > label').each(function () {
+        $('div:not(.navbar) > *:not(div):not(img):not(form):not(.flexbox), form > label').each(function () {
             var xPosition = $(this).position().left;
             var xDistance = Math.abs(event.pageX - xPosition) / pageWidth;
             var yPosition = $(this).position().top + $(this).outerHeight() * 0.5;

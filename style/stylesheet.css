@@ -218,10 +218,13 @@ label{
 
 .flexbox {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .flexbox > div{
+    width: fit-content;
     margin: 5px;
+    flex-shrink: 1;
 }
 
 .grow {
@@ -230,6 +233,10 @@ label{
 
 .half{    
     max-width: 56.25vh;
+}
+
+.fit{
+    max-width: fit-content;
 }
 
 .center{
