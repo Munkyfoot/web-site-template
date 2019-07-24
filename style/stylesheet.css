@@ -27,7 +27,7 @@ body > div:not(.navbar):not(.portrait), .flexbox > div{
     box-shadow: 0 1px 2px 1px rgba(0,0,0,0.5);
     width: calc(100% - 20px);
     background-color: rgb(200,200,200);
-    margin: 10px auto 0 auto;
+    margin: 10px 10px 0 10px;
     padding: 10px;    
     transition: box-shadow 0.15s ease-in-out;
     border-radius: 2px;
@@ -115,12 +115,12 @@ input:not([type=submit]):focus, input:not([type=submit]):active, textarea:focus,
 
 input[type=submit]{
     outline:none;
-    background-color: rgb(160,232,160);
+    background-color: rgb(128,232,132);
 }
 
 input[type=submit]:hover{
     cursor: pointer;
-    background-color: rgb(160,255,160);
+    background-color: rgb(128,255,132);
 }
 
 textarea{
@@ -134,10 +134,6 @@ label{
     margin-top: 10px;
     flex-grow: 1;
     border-bottom: 1px solid gray;
-}
-
-.center{
-    margin: auto;
 }
 
 .navbar{
@@ -193,7 +189,7 @@ label{
     width: calc(100% - 20px);
     max-width: 56.25vh;
     max-height: 56.25vh;
-    margin: 10px auto 0 auto;
+    margin: 10px 10px 0 10px;
     padding: 0;
     border-radius: 2px;
     overflow: hidden;    
@@ -211,10 +207,6 @@ label{
     width: calc(100% + 10px);
 }
 
-div > .portrait{
-    margin: auto;
-}
-
 .flexbox {
     display: flex;
 }
@@ -229,8 +221,11 @@ div > .portrait{
 
 .half{    
     max-width: 56.25vh;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.center{
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 body *{
