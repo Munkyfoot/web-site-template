@@ -74,6 +74,72 @@ img {
     display: block;
 }
 
+form{
+    display: flex;
+    width: 100%;
+    max-width: 324px;
+    flex-direction: column;
+}
+
+body > form{
+    margin: 0 10px;
+}
+
+form > *{
+    margin-top: 5px;
+}
+
+input, textarea{
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+    display: block;
+    padding: 5px;
+    min-height: 30px;
+    border-radius: 2px;
+    border: 1px solid gray;
+    flex-grow: 1;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .15s ease-in-out;
+    transition-property: background-color, border, box-shadow;
+}
+
+input:hover, textarea:hover{
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,1);
+}
+
+input:not([type=submit]):focus, input:not([type=submit]):active, textarea:focus, textarea:active{
+    outline:none;
+    border: 1px solid black;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,1);
+}
+
+input[type=submit]{
+    outline:none;
+    background-color: rgb(160,232,160);
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+    background-color: rgb(160,255,160);
+}
+
+textarea{
+    resize: vertical;
+    min-height: 90px;
+    max-height: 300px;
+}
+
+label{
+    display: block;
+    margin-top: 10px;
+    flex-grow: 1;
+    border-bottom: 1px solid gray;
+}
+
+.center{
+    margin: auto;
+}
+
 .navbar{
     background-color: black;
     position: sticky;
@@ -167,6 +233,6 @@ div > .portrait{
     margin-right: auto;
 }
 
-body > *{
+body *{
     opacity: 0;
 }

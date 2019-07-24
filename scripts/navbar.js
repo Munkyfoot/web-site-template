@@ -2,12 +2,12 @@ $(function () {
     var pages = {
         'Home': 'index.html',
         'About': 'about.html',
-        'Contact': 'javascript:InProgress()'
+        'Contact': 'contact.html'
     };
     var links = "";
     for (var page in pages) {
         links += "<a href='" + pages[page] + "'>" + page + "</a>";
     }
     $('body').prepend("<div class='navbar'>" + links + "</div>");
-    SequentialFade('.navbar, .navbar > *');
+    SequentialFade('.navbar, .navbar > *', 100);
 });
