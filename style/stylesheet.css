@@ -29,7 +29,7 @@ body > div:not(.navbar):not(.portrait), .flexbox > div{
     background-color: rgb(200,200,200);
     margin: 10px 10px 0 10px;
     padding: 10px;    
-    transition: box-shadow 0.15s ease-in-out;
+    transition: box-shadow 0.15s ease;
     border-radius: 2px;
 }
 
@@ -99,7 +99,7 @@ input, textarea{
     flex-grow: 1;
     font-size: medium;
     font-family: Arial, Helvetica, sans-serif;
-    transition: .15s ease-in-out;
+    transition: .15s ease;
     transition-property: background-color, border, box-shadow;
 }
 
@@ -155,7 +155,7 @@ label{
     padding: 5px 7.5px;
     font-size: larger;
     color: rgb(200,200,200);
-    transition: .15s ease-in-out;
+    transition: .15s ease;
     transition-property: padding, color;    
 }
 
@@ -173,7 +173,8 @@ label{
     left: 0;
     background-color:rgb(200,200,200);
     transform: scaleX(0);
-    transition: transform .15s ease-in-out;
+    transition: transform .15s ease;
+    transition-timing-function: steps()
 }
 
 .navbar > a:hover:before{
@@ -193,6 +194,7 @@ label{
 .portrait{
     display: flex;
     justify-content: center;
+    align-content: center;
     align-items: center;
     box-shadow: 0 1px 2px 1px rgba(0,0,0,0.5);
     width: calc(100% - 20px);
@@ -202,19 +204,20 @@ label{
     padding: 0;
     border-radius: 2px;
     overflow: hidden;    
-    transition: box-shadow 0.15s ease-in-out;    
+    transition: box-shadow 0.15s ease;    
 }
 
 .portrait > img{
-    width: 100%;
+    width: calc(100% + 20px);
     margin: 0;
     padding: 0;
-    transition: width 0.3s ease-in-out;   
 }
 
+/*
 .portrait > img:hover{
     width: calc(100% + 10px);
 }
+*/
 
 .flexbox {
     display: flex;
