@@ -11,7 +11,7 @@ $(function () {
         $(this).css('background', "radial-gradient(circle at " + pageCoords + ", white, rgb(224,224,224))");
         var pageWidth = $(document).width();
         var pageHeight = $(document).height();
-        $('body > *:not(div):not(img), .navbar').each(function () {
+        $('body > *:not(div):not(img)').each(function () {
             var yPosition = $(this).position().top + $(this).outerHeight() * 0.5;
             var yDistance = Math.abs(event.pageY - yPosition) / pageHeight;
             var posModX = (event.pageX / pageWidth - 0.5) * 10 * Math.pow(1 - yDistance, 10);
