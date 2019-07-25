@@ -26,11 +26,11 @@ $(function () {
             var yPosition = $(this).position().top + $(this).outerHeight() * 0.5;
             var yDistance = (event.pageY - yPosition) / pageHeight;
             var eucDistance = Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
-            var posModX = 20;
-            $(this).css('marginLeft', Math.max(0, -xDistance * posModX) + 'px');
-            $(this).css('marginRight', Math.max(0, xDistance * posModX) + 'px');
-            $(this).css('marginTop', Math.max(0, -yDistance * posModX) + 'px');
-            $(this).css('marginBottom', Math.max(0, yDistance * posModX) + 'px');
+            var posModX = 5;
+            $(this).css('marginLeft', Math.max(0, -xDistance * posModX) + '%');
+            $(this).css('marginRight', Math.max(0, xDistance * posModX) + '%');
+            $(this).css('marginTop', Math.max(0, -yDistance * posModX) + '%');
+            $(this).css('marginBottom', Math.max(0, yDistance * posModX) + '%');
         });
     });
     SequentialFade();

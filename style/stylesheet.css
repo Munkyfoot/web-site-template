@@ -185,7 +185,6 @@ label{
     cursor: default;
     display: block;
     font-size: x-large;
-    font-family: monospace;
     padding: 0 10px;
     margin-left: auto;
     color: white;
@@ -215,7 +214,7 @@ label{
 }
 
 .portrait > img{
-    width: calc(100% + 20px);
+    width: 110%;
     margin: 0;
     padding: 0;
 }
