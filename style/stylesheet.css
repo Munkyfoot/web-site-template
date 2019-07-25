@@ -175,7 +175,6 @@ label{
     background-color:rgb(200,200,200);
     transform: scaleX(0);
     transition: transform .15s ease;
-    transition-timing-function: steps()
 }
 
 .navbar > a:hover:before{
@@ -185,7 +184,7 @@ label{
 #header{
     cursor: default;
     display: block;
-    font-size: x-large;
+    font-size: large;
     padding: 0 10px;
     margin-left: auto;
     color: white;
@@ -196,6 +195,11 @@ label{
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+    transition: font-size .3s ease-in-out;
+}
+
+#header:hover{
+    font-size: x-large;
 }
 
 .portrait{
