@@ -38,6 +38,7 @@ body > div:not(.navbar):hover, .flexbox > div:hover{
 }
 
 h1, h2, h3, h4, h5, h6{
+    cursor: default;
     margin: 0;
     padding: 5px 10px;
     border-bottom: 1px solid black;
