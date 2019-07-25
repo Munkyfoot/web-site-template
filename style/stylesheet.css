@@ -177,8 +177,12 @@ label{
     transition: transform .15s ease;
 }
 
-.navbar > a:hover:before{
+.navbar > a:hover:before, #cur_page:before{
     transform: scaleX(1);
+}
+
+#cur_page{
+    color: white;
 }
 
 #header{
