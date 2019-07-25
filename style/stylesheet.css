@@ -23,7 +23,7 @@ body{
     font-size: medium;
 }
 
-body > div:not(.navbar):not(.portrait), .flexbox > div{    
+body > div:not(.navbar):not(.portrait):not(.menu), .flexbox > div{    
     box-shadow: 0 1px 2px 1px rgba(0,0,0,0.5);
     width: calc(100% - 20px);
     background-color: rgb(200,200,200);
@@ -33,7 +33,7 @@ body > div:not(.navbar):not(.portrait), .flexbox > div{
     border-radius: 2px;
 }
 
-body > div:not(.navbar):hover, .flexbox > div:hover{
+body > div:not(.navbar):not(.menu):hover, .flexbox > div:hover{
     box-shadow: 0 1px 2px 1px rgba(0,0,0,1);
 }
 
@@ -139,6 +139,7 @@ label{
 
 .navbar{
     display: flex;
+    z-index: 10;
     justify-content: center;
     align-items: center;
     background-color: black;
@@ -146,10 +147,9 @@ label{
     position: -webkit-sticky;
     top: 0;
     padding: 10px;
-    display: flex;
 }
 
-.navbar > a{
+.navbar > a, .menu > a{
     text-decoration: none;
     display: block;
     position: relative;
@@ -204,6 +204,20 @@ label{
 
 #header:hover{
     font-size: x-large;
+}
+
+.menu{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 15;
+    margin: 0;
+    padding: 10px;
+    height: 0;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    transition: height .3s ease-in-out;
 }
 
 .portrait{

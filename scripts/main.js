@@ -38,10 +38,10 @@ $(function () {
     SequentialFade();
 });
 
-function SequentialFade(tag = "body *", spacing = 50, length = 500) {
+function SequentialFade(tag = "body *", spacing = 50, length = 250, to=1) {
     i = 0;
     $(tag).each(function () {
-        $(this).delay(spacing * i).fadeTo(500, 1);
+        $(this).delay(spacing * i).fadeTo(length, to);
         i++;
     });
 }
