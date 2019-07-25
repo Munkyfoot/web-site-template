@@ -2,7 +2,7 @@ $(function () {
     $(window).mousemove(function (event) {
         if ($(this).width() >= 768) {
             var pageCoords = "" + event.pageX + "px 100vh";
-            $(this).css('background', "radial-gradient(circle at " + pageCoords + ", white, rgb(224,224,224))");
+            $('body').css('background', "radial-gradient(circle at " + pageCoords + ", white, rgb(224,224,224))");
             var pageWidth = $(document).width();
             var pageHeight = $(document).height();
             $('body > *:not(div):not(img):not(form)').each(function () {
