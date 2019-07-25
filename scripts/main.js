@@ -1,5 +1,5 @@
 $(function () {
-    $('body').mousemove(function (event) {
+    $(window).mousemove(function (event) {
         var pageCoords = "" + event.pageX + "px 100vh";
         $(this).css('background', "radial-gradient(circle at " + pageCoords + ", white, rgb(224,224,224))");
         var pageWidth = $(document).width();
