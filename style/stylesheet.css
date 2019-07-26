@@ -220,6 +220,25 @@ label{
     transition: height .3s ease-in-out;
 }
 
+#intro{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    margin: 0;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    background-color: black;
+    opacity: 1;
+}
+
+#intro > img{
+    opacity: 1;
+}
+
 .portrait{
     display: flex;
     justify-content: center;

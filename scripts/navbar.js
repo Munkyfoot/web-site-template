@@ -20,7 +20,9 @@ $(function () {
         $('body').prepend("<div class='navbar'><a href='javascript:ToggleMenu()'>Menu</a><span id='header'>Template</span></div>");
         $('body').prepend("<div class='menu'>" + links + "<a href='javascript:ToggleMenu()'>Back</a></div>");
     }
-    SequentialFade('.navbar, .navbar > *', 100);
+    setTimeout(function(){
+        SequentialFade('.navbar, .navbar > *', 100);
+    }, 1500);
 });
 
 function ToggleMenu(){

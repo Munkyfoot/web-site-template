@@ -35,10 +35,23 @@ $(function () {
             });
         }
     });
-    SequentialFade();
+
+    $('body').prepend("<span id='intro'><img src='./images/logo.png' /></span>");
+    setTimeout(function () {
+        SequentialFade('#intro', 0, 500, 0);
+        SequentialFade('#intro > *', 0, 250, 0);
+        setTimeout(function () {
+            $('#intro').toggle();
+        }, 500);
+    }, 1000);
+
+    setTimeout(function () {
+        
+        SequentialFade();
+    }, 1500);
 });
 
-function SequentialFade(tag = "body *", spacing = 50, length = 250, to=1) {
+function SequentialFade(tag = "body *:not(#intro):not(#intro *)", spacing = 50, length = 250, to = 1) {
     i = 0;
     $(tag).each(function () {
         $(this).delay(spacing * i).fadeTo(length, to);
